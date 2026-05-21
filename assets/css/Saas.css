@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Global Typography */
+p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: oblique;
+    font-size: 1.25rem;
+    color: black;
+}
+
+/* Carousel Adaptations */
+.carousel-item {
+    height: 300px;
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 200px;
+    }
+}
+/* 1. Target both html and :root to aggressively bump up priority */
+html, :root {
+  --bs-primary: #6366f1 !important;
+  --bs-primary-rgb: 99, 102, 241 !important;
+}
+ 
+/* 2. Force utility classes to recalculate using the new variable */
+.text-primary {
+  color: var(--bs-primary) !important;
+}
+.bg-primary {
+  background-color: var(--bs-primary) !important;
+}
+ 
+.btn-primary {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+}
+ 
+/* 3. Force hover states to respond */
+.btn-primary:hover {
+  background-color: #4f46e5 !important; /* Your darker shade */
+  border-color: #4f46e5 !important;
+}
